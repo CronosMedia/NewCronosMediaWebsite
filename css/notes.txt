@@ -1,0 +1,9 @@
+Culori:
+
+Albastru: #0D3B66; 
+Orange: #FF4E35;
+
+Gri Dark Text: #212529;
+Gri Dark deschis text descriere: #343A40;
+Gri deschis hover: #6c757d;
+Gri fundal navbar: #e9ecef;

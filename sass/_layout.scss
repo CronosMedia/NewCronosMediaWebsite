@@ -1,0 +1,84 @@
+/* 0 - 600px: Phone
+600 - 900px: Tablet Portrait
+900 - 1200px: Tablet landscpae
+1200 - 1800px is where normal styles apply
+1800px + : Big desktop */
+
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+$bp-zero: 0;
+
+// 0px
+@media only screen and (min-width: $bp-zero) {
+  .navbar {
+    display: none;
+  }
+
+  // MOBILE HEADER
+  .mobile {
+    display: flex;
+    background-color: $color-grey-light-2;
+
+    &__link {
+      display: flex;
+      align-items: center;
+    }
+    &__logo-img {
+      height: 1.5rem;
+      width: auto;
+      // margin-top: 0.5rem;
+    }
+    &__mobile-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      // max-width: 80vw;
+      padding: 1rem 0;
+    }
+    //   &__hamburger-menu {
+    //   }
+  }
+}
+
+// 500px
+@media only screen and (min-width: $bp-smallest) {
+  .navbar {
+    display: none;
+  }
+}
+
+// 600px
+@media only screen and (min-width: $bp-small) {
+  .navbar {
+    display: none;
+  }
+}
+
+// 900px
+@media only screen and (min-width: $bp-medium) {
+  .navbar {
+    display: flex;
+  }
+  .navmobile {
+    display: none;
+  }
+}
+
+// 1100px
+@media only screen and (min-width: $bp-large) {
+  .navmobile {
+    display: none;
+  }
+}
+
+// 1200px
+@media only screen and (min-width: $bp-largest) {
+  .navmobile {
+    display: none;
+  }
+}

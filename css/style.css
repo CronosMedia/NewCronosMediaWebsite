@@ -142,6 +142,10 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto; }
+  @media only screen and (min-width: 0) {
+    .search-bar {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
 
 .search-wrapper {
   justify-content: center; }

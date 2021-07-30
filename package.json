@@ -4,7 +4,8 @@
   "description": "Sass usage",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass_test": "node-sass css/style_test.scss css/style_test.css -w"
   },
   "repository": {
     "type": "git",

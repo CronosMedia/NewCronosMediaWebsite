@@ -144,3 +144,114 @@
   padding: 0.6rem;
   margin-right: 0.5rem;
 }
+
+/* FEATURED ALBUM CARDS */
+.card-container,
+.display-grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0 2.5rem 2.5rem 2.5rem;
+
+  // zero px $bp-zero: 0;
+  @media only screen and (min-width: $bp-zero) {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 1rem 2rem 2rem 1rem;
+  }
+
+  // 500px
+  @media only screen and (max-width: $bp-smallest) {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 1rem 2rem 2rem 1rem;
+  }
+
+  // 600px
+  @media only screen and (min-width: $bp-small) {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  // 900px
+  @media only screen and (min-width: $bp-medium) {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  // 1100px
+  @media only screen and (min-width: $bp-large) {
+    .navmobile {
+      display: none;
+    }
+  }
+
+  // 1200px
+  @media only screen and (min-width: $bp-largest) {
+    .navmobile {
+      display: none;
+    }
+  }
+}
+
+/* INDIVIDUAL ALBUM CARD */
+* {
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 60rem;
+}
+
+.image-card {
+  display: block;
+  width: 100%;
+  max-width: 60rem;
+  transition: transform 0.5s ease;
+  max-width: 100%;
+}
+
+.grow {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.grow img {
+  transition: all 0.5s ease-in-out;
+}
+
+.grow img:hover {
+  transform: scale(1.1);
+}
+
+.overlay-card {
+  // display: flex;
+  position: absolute;
+  bottom: 0;
+  background: $color-grey-dark-9;
+  background: rgba($color-grey-dark-9, 0.7);
+  color: $color-grey-light-1;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  color: $color-grey-light-1;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  text-align: left;
+  margin-bottom: 0.2rem;
+}
+
+.overlay-card h3 {
+  padding-bottom: 0.75rem;
+}
+
+.container:hover .overlay-card {
+  opacity: 1;
+}

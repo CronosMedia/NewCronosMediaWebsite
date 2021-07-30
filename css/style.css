@@ -189,6 +189,97 @@ body {
   padding: 0.6rem;
   margin-right: 0.5rem; }
 
+/* FEATURED ALBUM CARDS */
+.card-container,
+.display-grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0 2.5rem 2.5rem 2.5rem; }
+  @media only screen and (min-width: 0) {
+    .card-container,
+    .display-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      padding: 1rem 2rem 2rem 1rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .card-container,
+    .display-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      padding: 1rem 2rem 2rem 1rem; } }
+  @media only screen and (min-width: 37.5em) {
+    .card-container,
+    .display-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding: 0 2rem 2rem 2rem; } }
+  @media only screen and (min-width: 56.25em) {
+    .card-container,
+    .display-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      padding: 0 2rem 2rem 2rem; } }
+  @media only screen and (min-width: 68.75em) {
+    .card-container .navmobile,
+    .display-grid .navmobile {
+      display: none; } }
+  @media only screen and (min-width: 75em) {
+    .card-container .navmobile,
+    .display-grid .navmobile {
+      display: none; } }
+
+/* INDIVIDUAL ALBUM CARD */
+* {
+  box-sizing: border-box; }
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 60rem; }
+
+.image-card {
+  display: block;
+  width: 100%;
+  max-width: 60rem;
+  transition: transform 0.5s ease;
+  max-width: 100%; }
+
+.grow {
+  display: inline-block;
+  overflow: hidden; }
+
+.grow img {
+  transition: all 0.5s ease-in-out; }
+
+.grow img:hover {
+  transform: scale(1.1); }
+
+.overlay-card {
+  position: absolute;
+  bottom: 0;
+  background: #212529;
+  background: rgba(33, 37, 41, 0.7);
+  color: #f8f9fa;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  color: #f8f9fa;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  text-align: left;
+  margin-bottom: 0.2rem; }
+
+.overlay-card h3 {
+  padding-bottom: 0.75rem; }
+
+.container:hover .overlay-card {
+  opacity: 1; }
+
 /* SLIDER */
 /* CALL TO ACTION "SHOW BEST OFFER" */
 .cta-container {
@@ -280,58 +371,6 @@ body {
   line-height: 1;
   font-weight: 700;
   padding-top: 2rem; }
-
-/* FEATURED ALBUM CARDS */
-.card-container {
-  display: grid;
-  gap: 3rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  padding: 0 2.5rem 2.5rem 2.5rem; }
-
-/* INDIVIDUAL ALBUM CARD */
-.album-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #e9ecef;
-  border-radius: 0.5rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
-
-.album-card:hover {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s; }
-
-.album-link {
-  align-items: center;
-  text-decoration: none;
-  color: #212529;
-  transition-duration: 0.4s; }
-
-.album-link:hover {
-  color: #6c757d;
-  transition-duration: 0.4s; }
-
-.album-featured-image {
-  height: 24rem;
-  width: 100%;
-  flex-shrink: 0;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  overflow: hidden; }
-
-.album-description {
-  padding: 1.75rem 1rem; }
-
-.album-title {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase; }
-
-.album-introduction {
-  color: #495158;
-  text-align: center; }
 
 /* LATEST CATEGORY ALBUM CARDS */
 .categories-container {

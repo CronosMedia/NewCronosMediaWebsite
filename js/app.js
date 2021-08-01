@@ -8,3 +8,14 @@ $('.accordion__header').click(function (e) {
     $(this).next('.accordion__body').addClass('is-active');
   }
 });
+
+// Mobile Menu
+function mobileMenuOpen() {
+  let x = document.getElementById('mobileLinks');
+  if (x.style.display === 'flex') {
+    x.style.display = 'none';
+  } else {
+    x.style.display = 'flex';
+  }
+}
+console.log(mobileMenuOpen);
